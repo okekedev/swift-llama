@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
@@ -13,20 +13,20 @@ let package = Package(
     products: [
         .library(
             name: "LLamaSwift",
-            targets: ["LLamaSwift"]),
+            targets: ["llama-cpp-swift"] // Match the target name
+        ),
     ],
-   dependencies: [
-    .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
-],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
+    ],
     targets: [
         .target(
-    name: "llama-cpp-swift",
-    dependencies: ["Logging"]
-),
+            name: "llama-cpp-swift",
+            dependencies: ["Logging"]
         ),
         .testTarget(
             name: "llama-cpp-swiftTests",
-            dependencies: ["LLamaSwift"]
+            dependencies: ["llama-cpp-swift"] // Use the target name, not the product
         ),
     ]
 )
