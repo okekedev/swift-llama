@@ -5,7 +5,7 @@
 Use swift package manager:
 
 ```
-.package(url: "https://github.com/srgtuszy/llama-cpp-swift", branch: "main")
+.package(url: "https://github.com/okekedev/swift-llama", branch: "main")
 ```
 
 ## How to use
