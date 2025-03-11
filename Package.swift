@@ -15,7 +15,7 @@ let package = Package(
             name: "LLamaSwift",
             targets: ["LLamaSwift"]),
     ],
-    dependencies: 
+    dependencies: [
     ],
     targets: [
         .target(
